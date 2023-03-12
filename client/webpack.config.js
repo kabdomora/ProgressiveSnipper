@@ -20,8 +20,8 @@ module.exports = () => {
         title: 'Webpack Plugin'
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
-        swDest: 'service-worker.js',
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
       }), 
       new WebpackPwaManifest({
         fingerprints: false,
@@ -33,6 +33,7 @@ module.exports = () => {
         theme_color: '#225ca3',
         start_url:'./',
         publicPath: './',
+        display: 'standalone',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
